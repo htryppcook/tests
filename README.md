@@ -6,14 +6,15 @@ My assumptions:
 3. You have access to Java 8 / Python 2.7
 
 Additional Information:
+
 Tests 1 and 2:
-Java source is in 'src/', class files are compiled to 'bin/'.
-You can modify the graph being tested by editing 'src/test/TestData.java'.
+- Java source is in 'src/', class files are compiled to 'bin/'.
+- You can modify the graph being tested by editing 'src/test/TestData.java'.
 
 Test 3:
-Python source is in 'py/test_3.py'.
-You can modify the data file by editing 'py/test_data.txt'.
-For the purposes of this test, words are any string of characters delimited by whitespace ('\n' '\t', ' ').
+- Python source is in 'py/test_3.py'.
+- You can modify the data file by editing 'py/test_data.txt'.
+- For the purposes of this test, words are any string of characters delimited by whitespace ('\n' '\t', ' ').
 
 Steps to run:
 ```
