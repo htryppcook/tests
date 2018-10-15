@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+echo =====
+./run_1
+echo =====
+./run_2
+echo =====
+./run_3
+echo =====
