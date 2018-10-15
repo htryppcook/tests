@@ -1,3 +1,4 @@
 #!/usr/bin/sh
 
+echo Test 3
 python ./py/test_3.py ./py/test_data.txt
