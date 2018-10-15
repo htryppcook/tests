@@ -43,6 +43,53 @@ public class Node implements GNode {
     }
 
     /**
+     * Prints a string representation of this graph to stdout.
+     * @param node Start node of the graph to be printed.
+     */
+    public static void prettyPrintGraph(GNode node) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	Node.doPrintGraph(node, sb, 0, false);
+    	
+    	System.out.println(sb.toString());
+    }
+    
+    /**
+     * Recursive function used to build up the graph representation.
+     * @param node Current node.
+     * @param sb StringBuilder used to build up the graph representation.
+     */
+    public static void doPrintGraph(GNode node, StringBuilder sb, int depth,
+    		boolean last)
+    {
+    	sb.append("\n");
+    	
+    	if (depth > 0) {
+    		for (int i=1; i<depth; i++) {
+        		sb.append("│ ");	
+    		}
+
+    		if (!last) {
+    			sb.append("├─");	
+    		} else {
+    			sb.append("└─");
+    		}
+    	}
+
+    	sb.append(node.getName());
+    	
+    	GNode[] children = node.getChildren();
+    	
+    	for (int i=0; i<children.length; i++) {
+    		if (i == children.length-1) {
+    			Node.doPrintGraph(children[i], sb, depth+1, true);
+    		} else {
+    			Node.doPrintGraph(children[i], sb, depth+1, false);
+    		}
+    	}
+    }
+    
+    /**
      * Walk the entire graph starting at the passed in node, returning all
      * nodes found.
      * @param node Initial node.

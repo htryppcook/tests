@@ -6,8 +6,10 @@ import nodes.Node;
 
 public class Test2 {
 	public static void main(String[] args) {
-		Node test_node = TestData.build_test_graph();
+		Node test_node = TestData.test_graph;
         System.out.println("Test 2");
+        System.out.print("Graph: ");
+        Node.prettyPrintGraph(test_node);
         StringBuilder sb = new StringBuilder();
 
         sb.append("paths(A) = ( ");
