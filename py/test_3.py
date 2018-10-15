@@ -7,6 +7,7 @@ with open(sys.argv[1], 'r') as f:
 
     for line in f.readlines():
         for word in line.strip().split(' '):
+            word = word.strip()
             if word in result:
                 result[word] += 1
             else:
