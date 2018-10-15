@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+javac -cp src/ -d bin/ src/*/*
+java -cp ./bin/ test.Test2
+

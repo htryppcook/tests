@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+
+./run_1
+./run_2
+./run_3
+
